@@ -7,13 +7,13 @@ interface ScrollDownAnimationProps {
   height?: number | string;
 }
 
-const ScrollDownAnimation: React.FC<ScrollDownAnimationProps> = ({ width = 200, height = 200 }) => {
+const ScrollDownAnimation: React.FC<ScrollDownAnimationProps> = ({ width = 180, height = 180 }) => {
   return (
     <Lottie 
       animationData={scrollDownAnimation} 
       loop={true}
           style={{ width, height }}
-          className='-mb-60'
+          className='mt-20'
     />
   );
 };

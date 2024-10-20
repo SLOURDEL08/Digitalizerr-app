@@ -34,7 +34,7 @@ const ThemeViewer: React.FC = () => {
   };
 
   return (
-    <div className='min-h-screen flex items-center py-40'>
+    <div className=' flex items-center py-20'>
       <div className='flex gap-10'>
         <div className='w-[55%]'>
           <p className='text-white text-xl tracking-widest font-panton-light mb-4'>Un site qui vous ressemble</p>
@@ -51,7 +51,7 @@ const ThemeViewer: React.FC = () => {
               </Button>
             ))}
           </div>
-          <Button size='large'>Réaliser un devis</Button>
+          <Button size='medium' className='text-xl'>Réaliser un devis</Button>
         </div>
         <div className='border-4 w-[45%] rounded-3xl p-3'>
           <div className='relative w-full h-full overflow-hidden rounded-xl'>

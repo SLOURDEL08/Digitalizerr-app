@@ -21,6 +21,9 @@
 @layer base {
   body {
     @apply font-panton bg-[#420F84];
+    padding:0px 50px;
+     background: radial-gradient(#420F84 80%, #00000000 100%);
+     background-color: #200149;
   }
 }
 
@@ -35,4 +38,58 @@
   .font-poppins{
     font-family:'Poppins';
   }
+
+
+}
+
+  .underlined{
+  position: relative;
+}
+.underlined::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background-color: #F6D663;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underlined:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
+  .grouped:hover a.underlined::before {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+}
+
+
+/* Ajoute ceci à ton fichier CSS ou dans un style global */
+.navbar-transition {
+  transition: background-color 0.5s ease-in-out, opacity 0.5s ease-in-out; /* 0.5s est la durée de la transition, ajuste selon tes besoins */
+}
+
+.progressive-blur {
+  /* Apply a linear gradient to simulate the progressive blur */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 1) 100%);
+  backdrop-filter: blur(10px); /* Apply blur */
+  pointer-events: none; /* Prevent interaction */
+}
+
+
+.card-bg{
+background-color: #00000030;
+transition:0.3s ease-in-out all;
+border-radius: 1.5rem;
+}
+
+.card-bg:hover{
+background-color: #00000040;
 }

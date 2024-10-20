@@ -68,7 +68,7 @@ const WebSection: React.FC = () => {
   ];
 
   return (
-    <div className='text-center space-y-10 min-h-screen'>
+    <div className='text-center space-y-10 py-20'>
       <div>
         <span className='text-white text-xl tracking-widest'>nos différentes offres de</span>
         <h4 className='text-8xl text-[#F6D663] font-bold mb-4'>SITE WEB</h4>
