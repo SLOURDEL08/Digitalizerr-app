@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @font-face {
   font-family: 'PantonBlack';
   src: url('./fonts/Panton-BlackCaps.otf') format('opentype');
@@ -20,10 +20,10 @@
 
 @layer base {
   body {
-    @apply font-panton bg-[#420F84];
+    @apply font-panton bg-[#2e0f84];
     padding:0px 50px;
-     background: radial-gradient(#420F84 80%, #00000000 100%);
-     background-color: #200149;
+     background: radial-gradient(#2e0f84 80%, #00000000 100%);
+     background-color: #16034a;
   }
 }
 
@@ -38,7 +38,9 @@
   .font-poppins{
     font-family:'Poppins';
   }
-
+.font-rubik{
+    font-family:'Rubik';
+  }
 
 }
 
@@ -92,4 +94,41 @@ border-radius: 1.5rem;
 
 .card-bg:hover{
 background-color: #00000040;
+}
+
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:focus {
+  outline: 0px!important;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.iscrolled{
+  width: 97%;
+  margin: 1.5%;
+
+}
+
+.shadowlight:hover{
+  box-shadow:0px 0px 40px 0px #ffffff20!important
+}
+
+.bged{
+  background-image: url('../src/images/blured.png');
+  background-position: cover;
+  background-size: 100%;
 }

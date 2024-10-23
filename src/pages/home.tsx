@@ -2,9 +2,9 @@ import React from 'react';
 import ServicesSection from '../components/ServicesSection';
 import WebSection from '../components/WebSection';
 import ThemeViewer from '../components/ThemeViewer';
-import ProcessusSection from '../components/ProcessusSection';
 import ContactSection from '../components/ContactSection';
 import Header from '../components/Header';
+import ProcessusSectionServices from '../components/ProcessusSectionService';
 
 const Home: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       <ServicesSection />
       <WebSection />
       <ThemeViewer />
-      <ProcessusSection />
+      <ProcessusSectionServices />
       <ContactSection />
     </>
   );

@@ -18,10 +18,10 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const baseClasses = 'font-black shadow-lg transition-all duration-300 ease-in-out';
   const variantClasses = {
-    primary: 'bg-white text-[#420F84] uppercase rounded-full hover:shadow-2xl hover:text-[#F6D663]',
+    primary: 'bg-white text-[#2e0f84] uppercase rounded-full hover:shadow-2xl hover:text-[#F6D663]',
     secondary: 'bg-gray-200 text-gray-700 rounded-full hover:shadow-2xl',
-    'filter': 'bg-transparent text-white border-2 border-white rounded-xl hover:bg-white hover:text-[#420F84]',
-    'filter-active': 'bg-white text-[#420F84] border-2 border-white rounded-xl'
+    'filter': 'bg-transparent text-white border-2 border-white rounded-xl hover:bg-white hover:text-[#2e0f84]',
+    'filter-active': 'bg-white text-[#2e0f84] border-2 border-white rounded-xl'
   };
   const sizeClasses = {
     small: 'px-5 py-2 text-md',

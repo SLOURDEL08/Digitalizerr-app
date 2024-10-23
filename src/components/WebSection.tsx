@@ -1,10 +1,13 @@
 import React from 'react';
 import lampImage from '../images/lampMessage.png';
+import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 interface WebOfferProps {
   title: string;
   features: string[];
   color: string;
+  link: string;
 }
 
 const ArrowIcon: React.FC<{ color: string }> = ({ color }) => (
@@ -13,8 +16,8 @@ const ArrowIcon: React.FC<{ color: string }> = ({ color }) => (
   </svg>
 );
 
-const WebOffer: React.FC<WebOfferProps> = ({ title, features, color }) => (
-  <div className='flex justify-between gap-14 bg-[#00000030] hover:bg-[#00000040] transition-all p-8 px-10 rounded-3xl'>
+const WebOffer: React.FC<WebOfferProps> = ({ title, features, color, link }) => (
+  <div className='flex justify-between cursor-pointer gap-14 bg-[#00000030] scale-100 hover:scale-105 hover:bg-[#00000040] transition-all duration-500 p-8 px-10 rounded-3xl'>
     <div className={`flex flex-col min-w-60 rounded-full shadow-md overflow-hidden`} style={{ backgroundColor: color }}>
       <div className='flex-grow flex items-center justify-center font-bold text-2xl p-4 text-white'>
         {title}
@@ -30,7 +33,7 @@ const WebOffer: React.FC<WebOfferProps> = ({ title, features, color }) => (
       </ul>
     </div>
     <div className='flex items-center min-w-16 w-16 h-auto'>
-      <a href='/'>
+      <a href={link}>
         <ArrowIcon color={color} />
       </a>
     </div>
@@ -46,6 +49,7 @@ const WebSection: React.FC = () => {
         'Formulaire', 'Responsive', 'Google',
       ],
       color: '#4084EA',
+      link: '/vitrine'
     },
     {
       title: 'BOUTIQUE',
@@ -55,6 +59,7 @@ const WebSection: React.FC = () => {
         'Boutique Woocommerce', 'Paiement sécurisé', 'Suivi des commandes',
       ],
       color: '#F95E5E',
+      link: '/boutique'
     },
     {
       title: 'SUR-MESURE',
@@ -64,6 +69,7 @@ const WebSection: React.FC = () => {
         'Création graphique', 'Newsletter', 'Assistance', 'Support', 'Animation'
       ],
       color: '#4ABB28',
+      link: '/sur-mesure'
     }
   ];
 

@@ -31,8 +31,8 @@ const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
   );
 };
 
-const ReviewSection: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(2); // Start with the middle testimonial
+const ReviewSection: React.FC<{ onReserveClick: () => void }> = ({ onReserveClick }) => {
+  const [currentIndex, setCurrentIndex] = useState(2);
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1));
@@ -49,16 +49,33 @@ const ReviewSection: React.FC = () => {
     return 'border-4 rounded-full border-white relative w-16 h-16 z-[1] -mx-2 opacity-20';
   };
 
+  const getColorStyles = (color: string) => {
+    const colorMap: { [key: string]: { border: string, background: string } } = {
+      purple: { border: '#9333EA', background: '#F3E8FF' },
+      yellow: { border: '#FBBF24', background: '#FEF3C7' },
+      blue: { border: '#3B82F6', background: '#DBEAFE' },
+      green: { border: '#10B981', background: '#D1FAE5' },
+      red: { border: '#EF4444', background: '#FEE2E2' },
+    };
+    return colorMap[color] || { border: 'white', background: 'transparent' };
+  };
+
   const renderAvatars = () => {
     return testimonials.map((_, index) => {
       const adjustedIndex = (currentIndex - 2 + index + testimonials.length) % testimonials.length;
       const testimonial = testimonials[adjustedIndex];
+      const colorStyles = getColorStyles(testimonial.color);
       return (
         <div key={adjustedIndex} className={getAvatarClass(adjustedIndex)}>
           <img 
             src={testimonial.image} 
             alt={testimonial.name} 
-            className={`w-full h-full border-4 border-${testimonial.color}-300 bg-${testimonial.color}-100 p-2 rounded-full`} 
+            className="w-full h-full p-2 rounded-full"
+            style={{
+              borderColor: colorStyles.border,
+              backgroundColor: colorStyles.background,
+              borderWidth: '4px',
+            }}
           />
         </div>
       );
@@ -66,12 +83,12 @@ const ReviewSection: React.FC = () => {
   };
 
   return (
-    <div className='w-full rounded-2xl text-center p-8 bg-white md:w-1/2'>
+    <div className='flex flex-col justify-between gap-4 rounded-2xl text-center p-8 bg-white w-full'>
       <div className='avatar-container flex justify-center items-center'>
         {renderAvatars()}
       </div>
       
-      <div className='w-4/5 mx-auto space-y-4 pt-4'>
+      <div className='w-4/5 mx-auto space-y-4'>
         <div className='flex items-center justify-center gap-8'>
           <img 
             src={arrow} 
@@ -89,13 +106,18 @@ const ReviewSection: React.FC = () => {
         </div>
         
         <p className='pantonlight text-xs'>{testimonials[currentIndex].text}</p>
-              <div className='pantonlight'>
-                            <StarRating rating={testimonials[currentIndex].rating} />
-
+        <div className='pantonlight'>
+          <StarRating rating={testimonials[currentIndex].rating} />
           <span className=''>{testimonials[currentIndex].name}</span>
           <p className='text-xs pt-1.5'>{testimonials[currentIndex].date}</p>
         </div>
       </div>
+      <button 
+        className='w-full text-base py-2 border-[#2e0f84] text-[#2e0f84] transition-all duration-500 hover:bg-[#2e0f84] hover:text-[#F6D663] border-2 rounded-full'
+        onClick={onReserveClick}
+      >
+        Réservez votre appel téléphonique
+      </button>
     </div>
   );
 };

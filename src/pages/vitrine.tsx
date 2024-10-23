@@ -6,10 +6,26 @@ import security from '../images/security.svg'
 import agenda from '../images/agenda.svg'
 import chat from '../images/chatia.svg'
 import ContactSection from '../components/ContactSection';
+import ImageSlider from '../components/ImageSlider';
+import artiste from '../images/themeviewer/artiste.png'
+import batiment from '../images/themeviewer/batiment.png'
+import cosmetic from '../images/themeviewer/cosmetic.png'
 
 
 
 const Vitrine: React.FC = () => {
+
+      const images = [
+    artiste,
+    batiment,
+    cosmetic,
+  ];
+  
+  const titles = [
+    'Couvreur/Zingueur',
+    'Charpentier',
+    'Maçon',
+  ];
   return (
     <div>
          <div className='flex  mt-24'>
@@ -27,24 +43,7 @@ const Vitrine: React.FC = () => {
                 <p className='text-white/80 text-xs tracking-widest w-2/3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id magna ut dui accumsan blandit. Curabitur et neque vel nisi pharetra posuere sit amet vel ipsum. Sed eu leo mollis, consequat urna quis, aliquet lorem. Proin eget tortor turpis. Etiam euismod eleifend tincidunt. Suspendisse dignissim euismod nulla, in pretium dui feugiat vel. Aenean non pulvinar augue, ut varius risus. Suspendisse sed odio sed felis laoreet scelerisque eget sit amet metus. Quisque gravida fringilla diam nec faucibus.</p>
 
       </div>
-      <div className=' w-[40%] overflow-hidden relative bg-[#00000030] hover:bg-[#00000040] transition-all p-8 px-10 rounded-3xl'>
-        <div className='flex overflow-hidden   justify-center p-4  items-center absolute inset-0 w-full h-full'>
-          <div className='w-full h-full overflow-hidden rounded-2xl relative'>
-            <img src={theme} className='w-full relative  h-full object-cover  object-top absolute :inset-0' alt='' />
-            <div className='  rounded-2xl  w-full h-full absolute inset-0'></div>
-            
-            </div>
-        </div>
-        <div className='relative h-full flex items-end '>
-          
-        
-                            <p className='w-fit mx-auto text-sm text-center te  px-6 tracking-widest p-2 rounded-full bg-gradient-to-t bg-black/60 text-[#F6D663] shadow-xl border-white backdrop-blur-sm'>Couvreur/Zingueur</p>
-            <img src={arrow} className='h-14 w-auto absolute -bottom-2 left-0 rotate-180 scale-100 hover:scale-110 transition-all duration-300 opacity-80 hover:opacity-100' alt='' />
-            <img src={arrow} className='h-14 w-auto absolute -bottom-2 right-0 opacity-80 scale-100 hover:scale-110 transition-all duration-300 hover:opacity-100' alt=''/>
-        </div>
-
-        
-</div>
+                <ImageSlider images={images} titles={titles} />
 
       </div>
       <div className='bg-[#00000030] justify-around p-10 rounded-3xl mt-10 text-white flex items-center justify-center hover:bg-[#00000040] transition-all duration-300'>
