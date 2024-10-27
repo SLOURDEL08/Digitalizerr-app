@@ -44,9 +44,9 @@ const ReviewSection: React.FC<{ onReserveClick: () => void }> = ({ onReserveClic
 
   const getAvatarClass = (index: number) => {
     const distance = (index - currentIndex + testimonials.length) % testimonials.length;
-    if (distance === 0) return 'border-4 rounded-full border-white relative w-24 h-24 z-[3]';
-    if (distance === 1 || distance === testimonials.length - 1) return 'border-4 rounded-full border-white relative opacity-80 w-20 h-20 z-[2] -mx-4';
-    return 'border-4 rounded-full border-white relative w-16 h-16 z-[1] -mx-2 opacity-20';
+    if (distance === 0) return 'border-4 rounded-full border-white relative max-md:w-20 max-md:h-20 w-24 h-24 z-[3]';
+    if (distance === 1 || distance === testimonials.length - 1) return 'border-4 rounded-full border-white relative opacity-80 max-md:w-14 max-md:h-14 w-20 h-20 z-[2] -mx-4';
+    return 'border-4 rounded-full border-white relative max-md:w-10 max-md:h-10 w-16 h-16 z-[1] max-md:-mx-1 -mx-2 opacity-20';
   };
 
   const getColorStyles = (color: string) => {
@@ -83,7 +83,7 @@ const ReviewSection: React.FC<{ onReserveClick: () => void }> = ({ onReserveClic
   };
 
   return (
-    <div className='flex flex-col justify-between gap-4 rounded-2xl text-center p-8 bg-white w-full'>
+    <div className='flex flex-col justify-between gap-4 rounded-2xl text-center max-md:p-4 p-8 bg-white w-full'>
       <div className='avatar-container flex justify-center items-center'>
         {renderAvatars()}
       </div>

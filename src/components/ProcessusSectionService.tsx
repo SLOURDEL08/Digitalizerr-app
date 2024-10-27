@@ -2,6 +2,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import starProcessus from '../images/starprocessus.png';
 import starImage from '../images/star.png';
 import arrowRight from '../images/arrow.png';
+import bubble from '../images/bubble.png';
+import cald from '../images/cald.png';
+import { Title } from './Typography';
 
 interface ProcessStepProps {
   title: string;
@@ -22,7 +25,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
     onClick={onClick}
     className={`
       cursor-pointer min-w-80 transition-all relative text-center p-8 rounded-3xl w-60 mt-12 mb-10 space-y-2 pt-14
-      ${isActive ? 'bg-[#F6D663] scale-110 text-black' : 'bg-[#00000020] hover:bg-[#00000030] text-white'}
+      ${isActive ? 'bg-[#F6D663] scale-110 text-black' : 'bg-[#00000020] animate-pulse hover:bg-[#00000030] text-white'}
       ${isGhost ? 'opacity-0 pointer-events-none' : ''}
     `}
   >
@@ -98,21 +101,18 @@ const ProcessusSectionServices: React.FC = () => {
   const isLastStep = activeStep === processSteps.length - 1;
 
   return (
-    <div className="flex relative flex-col items-center justify-center gap-10 py-20 -mb-14">
-      <div className="relative w-full z-20 text-center flex gap-10 justify-center">
-        <h6 className="text-[#F6D663] text-7xl mb-4">Notre Processus</h6>
-        <div className="flex items-start">
-          <img src={starImage} alt="star" className="w-20 -mt-4 ml-4 h-auto" />
-          <img src={starImage} alt="star" className="w-14 mt-10" />
-        </div>
+    <div className="flex relative flex-col items-center justify-center max-md:gap-6 gap-10 !-mb-6">
+      <div className="relative w-auto z-20 text-center ">
+        <Title className="max-md:mb-8 z-20">Notre Processus</Title>
+          <img src={bubble} alt="star" className="w-28 z-10 max-md:w-8  absolute -top-16 -right-32 -rotate-12" />
       </div>
 
       <div className="group relative w-full">
         <div 
           ref={scrollContainerRef}
-          className="flex overflow-x-auto gap-10 scrollbar-hide pl-4"
+          className="flex overflow-x-auto  gap-10 scrollbar-hide pl-4"
         >
-          <div className="flex gap-10">
+          <div className="flex gap-10 ">
             {processSteps.map((step, index) => (
               <div 
                 key={`step-${index}`}
@@ -153,7 +153,7 @@ const ProcessusSectionServices: React.FC = () => {
           />
         </button>
 
-        <div className="absolute pointer-events-none inset-0 bg-gradient-to-r from-transparent from-60% to-[#2e0f84] to-100% z-10" />
+        <div className="absolute pointer-events-none -right-10 inset-0 bg-gradient-to-r from-transparent from-60% to-[#2e0f84] to-100% z-10" />
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import React from 'react';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-[#00000080] -mx-[50px] text-white">
-      <div className=" p-20 flex justify-start gap-20">
+      <div className=" p-20 flex max-lg:flex-wrap justify-start gap-20">
         <div className="w-full md:w-1/4 mb-6 space-y-6 md:mb-0">
           <div className='bg-yellow-400 h-14 flex items-center text-xl justify-center rounded-xl'>
             @ <span>/Digitalizerr</span>

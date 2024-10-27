@@ -2,6 +2,7 @@ import React from 'react';
 import lampImage from '../images/lampMessage.png';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import { Subtitle, Title } from './Typography/Text';
 
 interface WebOfferProps {
   title: string;
@@ -17,22 +18,22 @@ const ArrowIcon: React.FC<{ color: string }> = ({ color }) => (
 );
 
 const WebOffer: React.FC<WebOfferProps> = ({ title, features, color, link }) => (
-  <div className='flex justify-between cursor-pointer gap-14 bg-[#00000030] scale-100 hover:scale-105 hover:bg-[#00000040] transition-all duration-500 p-8 px-10 rounded-3xl'>
+  <div className='flex max-lg:relative max-lg:block max-lg:space-y-8 justify-between cursor-pointer gap-14 bg-[#00000030] scale-100 hover:scale-105 hover:bg-[#00000040] transition-all duration-500 p-8 px-10 rounded-3xl'>
     <div className={`flex flex-col min-w-60 rounded-full shadow-md overflow-hidden`} style={{ backgroundColor: color }}>
-      <div className='flex-grow flex items-center justify-center font-bold text-2xl p-4 text-white'>
+      <div className='flex-grow flex items-center max-md:p-2 max-md:text-[22px] justify-center font-bold text-2xl p-4 text-white'>
         {title}
       </div>
     </div>
     <div className='flex-grow m-auto'>
-      <ul className='flex flex-wrap gap-4 gap-x-14 justify-start list-disc pl-5 max-h-[4.5em] overflow-hidden'>
+      <ul className='flex flex-wrap gap-4 gap-x-14 justify-start list-disc pl-5 max-h-[4.5em] max-md:max-h-none overflow-hidden'>
         {features.map((feature, index) => (
-          <li key={index} className='text-white marker:text-white w-auto'>
+          <li key={index} className='text-white max-md:text-xs marker:text-white w-auto'>
             {feature}
           </li>
         ))}
       </ul>
     </div>
-    <div className='flex items-center min-w-16 w-16 h-auto'>
+    <div className='flex max-lg:absolute max-lg:bottom-8 max-lg:right-10 items-center min-w-16 w-16 h-auto'>
       <a href={link}>
         <ArrowIcon color={color} />
       </a>
@@ -74,10 +75,10 @@ const WebSection: React.FC = () => {
   ];
 
   return (
-    <div className='text-center space-y-10 py-20'>
+    <div className='text-center space-y-10'>
       <div>
-        <span className='text-white text-xl tracking-widest'>nos différentes offres de</span>
-        <h4 className='text-8xl text-[#F6D663] font-bold mb-4'>SITE WEB</h4>
+        <Subtitle className='mb-4'>nos différentes offres de</Subtitle>
+        <Title type='primary'>SITE WEB</Title>
       </div>
     
       <div className='space-y-10'>

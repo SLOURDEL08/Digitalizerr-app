@@ -25,7 +25,7 @@ const ImageSlider: React.FC<SliderProps> = ({ images, titles }) => {
 
   return (
     <div 
-      className='w-[40%] overflow-hidden group relative bg-[#00000030] hover:bg-[#00000040] transition-all duration-500 ease-in-out p-8 px-10 rounded-3xl'
+      className='w-[45%] max-md:w-full max-md:h-[400px] overflow-hidden group relative bg-[#00000030] hover:bg-[#00000040] transition-all duration-500 ease-in-out p-8 px-10 rounded-3xl'
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
@@ -45,18 +45,18 @@ const ImageSlider: React.FC<SliderProps> = ({ images, titles }) => {
         >
           <img 
             src={arrowyellow}
-            className='h-7 rotate-180 scale-95 hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer' 
+            className='h-7 animate-pulse rotate-180 scale-95 hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer' 
             alt='Previous'
             onClick={goToPrevious}
           />
 
-          <p className='w-fit mx-auto text-lg text-center uppercase font-extralight tracking-widest rounded-full text-white border-white transition-all duration-500 ease-in-out'>
+          <p className='w-fit max-lg:text-sm mx-auto text-lg text-center uppercase font-extralight tracking-widest rounded-full text-white border-white transition-all duration-500 ease-in-out'>
             {titles[currentIndex]}
           </p>
 
           <img 
             src={arrowyellow}
-            className='h-7 w-auto scale-95 hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer' 
+            className='h-7 animate-pulse w-auto scale-95 hover:scale-110 transition-all duration-500 ease-in-out cursor-pointer' 
             alt='Next'
             onClick={goToNext}
           />

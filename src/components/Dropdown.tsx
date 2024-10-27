@@ -10,7 +10,7 @@ const DropDown: React.FC = () => {
       className={`
         fixed right-80 w-64 pt-4 
         ease-in-out z-40
-        transition-all duration-500
+        
         ${isScrolled ? 'top-[130px]' : 'top-20'}
         ${isServicesHovered ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}
       `}

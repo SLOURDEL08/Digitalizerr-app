@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from './Button';
 import ReviewSection from './Review';
 import Calendar from './Calendar';  // Nouveau import pour le composant Calendar externalisé
+import { Title } from './Typography';
 
 const ContactForm: React.FC = () => (
   <form className="space-y-4">
@@ -67,9 +68,9 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center py-20'>
-      <h2 className='text-6xl text-[#F6D663] text-center  mb-8'>Contactez-nous</h2>
-      <div className='card-bg p-10 w-full'>
+    <div className='flex flex-col items-center justify-center'>
+      <Title className='text-center mb-14 max-md:mb-14'>Contactez-nous</Title>
+      <div className='card-bg p-10 max-md:p-6 w-full'>
         <div className='flex flex-col md:flex-row gap-14'>
           <div className='w-full md:w-1/2'>
             <ContactForm />

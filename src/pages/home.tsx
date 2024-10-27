@@ -8,14 +8,14 @@ import ProcessusSectionServices from '../components/ProcessusSectionService';
 
 const Home: React.FC = () => {
   return (
-      <>
+      <div className='space-y-40 max-lg:space-y-32 max-md:space-y-28 max-sm:space-y-20'>
       <Header />
       <ServicesSection />
       <WebSection />
       <ThemeViewer />
       <ProcessusSectionServices />
       <ContactSection />
-    </>
+    </div>
   );
 };
 

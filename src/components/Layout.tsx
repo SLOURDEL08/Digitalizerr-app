@@ -13,10 +13,10 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <NavigationProvider>
-      <div className="flex flex-col">
+      <div className="">
         <Navbar />
         <DropDown />
-        <main className="flex-grow container mx-auto py-8">
+        <main className=" mx-auto py-8">
           {children}
         </main>
         <Footer />

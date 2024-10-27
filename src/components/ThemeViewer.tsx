@@ -12,6 +12,7 @@ import batimentImage from '../images/themeviewer/batiment.png';
 import peintreImage from '../images/themeviewer/peintre.png';
 import transportImage from '../images/themeviewer/vtc.png';
 import boutiqueImage from '../images/themeviewer/cosmetic.png';
+import { Subtitle, Title } from './Typography';
 
 const themeImages = {
   Cosmetic: cosmeticImage,
@@ -34,12 +35,12 @@ const ThemeViewer: React.FC = () => {
   };
 
   return (
-    <div className=' flex items-center py-20'>
-      <div className='flex gap-10'>
-        <div className='w-[55%]'>
-          <p className='text-white text-xl tracking-widest font-panton-light mb-4'>Un site qui vous ressemble</p>
-          <span className='text-[#F6D663] text-6xl leading-none font-panton'>Choisissez parmi un large choix de thèmes</span>
-          <div className='filter-contain flex flex-wrap gap-6 mt-8 mb-11'>
+    <div className=' flex items-center'>
+      <div className='flex max-lg:block gap-20'>
+        <div className='w-[50%] max-lg:w-full'>
+          <Subtitle className='mb-4'>Un site qui vous ressemble</Subtitle>
+          <Title type='secondary' className=''>Choisissez parmi un large choix de thèmes</Title>
+          <div className='filter-contain max-md:text-xs flex flex-wrap gap-6 mt-8 mb-11'>
             {Object.keys(themeImages).map((theme) => (
               <Button
                 key={theme}
@@ -53,7 +54,7 @@ const ThemeViewer: React.FC = () => {
           </div>
           <Button size='medium' className='text-xl'>Réaliser un devis</Button>
         </div>
-        <div className='border-4 w-[45%] rounded-3xl p-3'>
+        <div className='border-4 w-[50%] max-lg:w-full max-lg:mt-10 max-lg:h-[500px] rounded-3xl p-3'>
           <div className='relative w-full h-full overflow-hidden rounded-xl'>
             <img
               src={themeImages[currentTheme as keyof typeof themeImages]}

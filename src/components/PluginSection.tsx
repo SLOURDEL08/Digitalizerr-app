@@ -4,6 +4,10 @@ import starImage from '../images/star.png';
 import arrowRight from '../images/arrow.png';
 import { ChevronRight, CheckCircle2, Star, Zap, Shield, Globe2, Search, Share2, Bell, BarChart4, Settings, Cloud, Paintbrush, Sparkles, MessageCircle, Lock, ChartNoAxesCombined } from 'lucide-react';
 import chart from '../images/chart.png'
+import puzzle from '../images/plug.png'
+import reviewpouce from '../images/reviewpouce.png'
+import bubble from '../images/bubble.png'
+import { Paragraph, Title } from './Typography';
 
 
 interface Plugin {
@@ -96,26 +100,27 @@ const PluginSection: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen text-white py-10 sm:py-16 lg:py-20 -mb-10">
-      <div className="relative mx-auto px-4 sm:px-6 lg:px-8">
+    <div className=" text-white max-md:py-20 py-40">
+      <div className="relative mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-8 sm:mb-10 relative mx-auto max-w-2xl">
+        <div className="text-center w-4/5 z-30 mb-10 max-lg:mb-4 relative mx-auto ">
           <img 
-            src={starImage} 
+            src={puzzle} 
             alt="star" 
-            className="absolute w-12 sm:w-16 h-12 sm:h-16 -top-8 -right-4 sm:-right-10 animate-pulse" 
+            className="absolute w-24 -right-14 max-md:w-14 max-md:-right-0 max-md:top-10 -top-14" 
           />
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Plugins Premium</h2>
-          <p className="text-sm sm:text-base leading-6 sm:leading-8 text-gray-300 uppercase pb-4 tracking-widest font-rubik px-4 sm:px-0">
+
+          <Title className='text-white mb-8 max-md:mb-8'>Plugins Premium</Title>
+          <Paragraph className="mb-4  max-md:mb-10 leading-loose">
             Enrichissez votre site avec notre collection de plugins premium soigneusement sélectionnés pour optimiser chaque aspect de votre présence en ligne.
-          </p>
+          </Paragraph>
         </div>
 
-        <div className='gap-6 sm:gap-8 lg:gap-10 space-y-8 sm:space-y-10 lg:space-y-14 w-full'>
+        <div className='gap-6 sm:gap-8 lg:gap-10 space-y-10 max-md:space-y-12  w-full'>
           {/* Categories */}
           <div className="w-full !z-50 px-4 sm:px-0">
-            <div className="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
-              <div className="flex h-full justify-start sm:justify-center gap-4 sm:gap-6 lg:gap-8 min-w-max sm:min-w-0">
+            <div className="overflow-x-auto noscrollbar -mx-4 sm:mx-0 px-4 sm:px-0">
+              <div className="flex max-lg:gap-4 noscrollbar h-full justify-start sm:justify-center gap-6   min-w-max sm:min-w-0">
                 {categories.map(category => (
                   <button
                     key={category}
@@ -124,13 +129,13 @@ const PluginSection: React.FC = () => {
                       setActivePluginIndex(0);
                       scrollToPlugin(0);
                     }}
-                    className={`px-4 sm:px-6 py-2 sm:py-3 text-left rounded-lg transition-all whitespace-nowrap ${
+                    className={`px-6  py-2.5 max-lg:px-4  text-left rounded-lg transition-all whitespace-nowrap ${
                       selectedCategory === category
                         ? 'bg-[#F6D663] text-black'
                         : 'bg-[#00000020] hover:bg-[#ffffff10]'
                     }`}
                   >
-                    <span className="text-base sm:text-lg">
+                    <span className="text-base  max-lg:text-sm">
                       {category.charAt(0).toUpperCase() + category.slice(1)}
                     </span>
                   </button>
