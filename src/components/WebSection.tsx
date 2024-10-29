@@ -75,7 +75,7 @@ const WebSection: React.FC = () => {
   ];
 
   return (
-    <div className='text-center space-y-10'>
+    <section id='developpement' className='scroll-mt-[100px] text-center space-y-10'>
       <div>
         <Subtitle className='mb-4'>nos différentes offres de</Subtitle>
         <Title type='primary'>SITE WEB</Title>
@@ -87,7 +87,7 @@ const WebSection: React.FC = () => {
         ))}
       </div>
       <img src={lampImage} className='mx-auto w-[600px]' alt="Lamp" />
-    </div>
+    </section>
   );
 };
 

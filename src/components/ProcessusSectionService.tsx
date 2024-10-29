@@ -25,7 +25,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
     onClick={onClick}
     className={`
       cursor-pointer min-w-80 transition-all relative text-center p-8 rounded-3xl w-60 mt-12 mb-10 space-y-2 pt-14
-      ${isActive ? 'bg-[#F6D663] scale-110 text-black' : 'bg-[#00000020] animate-pulse hover:bg-[#00000030] text-white'}
+      ${isActive ? 'bg-[#F6D663] scale-110 text-black' : 'bg-[#00000020] animate- hover:bg-[#00000030] text-white'}
       ${isGhost ? 'opacity-0 pointer-events-none' : ''}
     `}
   >

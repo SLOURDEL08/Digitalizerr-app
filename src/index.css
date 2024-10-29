@@ -153,3 +153,59 @@ body{
 
 }
 }
+
+
+.form-booking-call {
+  /* Personnalisation de la scrollbar pour Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #2e0f84 transparent;
+
+  /* Personnalisation de la scrollbar pour Chrome, Edge, Safari */
+  &::-webkit-scrollbar {
+    width: 8px;  /* Largeur de la scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;  /* Fond de la piste */
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #2e0f84;  /* Couleur de la "poignée" */
+    border-radius: 10px;
+    
+    /* Effet de hover */
+    &:hover {
+      background: #3d1bad;
+    }
+  }
+
+  /* Version plus subtile avec transparence */
+  &.subtle {
+    &::-webkit-scrollbar-thumb {
+      background: rgba(46, 15, 132, 0.6);
+      
+      &:hover {
+        background: rgba(46, 15, 132, 0.8);
+      }
+    }
+  }
+}
+
+/* Style alternatif avec des bords */
+.form-booking-call.bordered {
+  &::-webkit-scrollbar {
+    width: 10px;
+    border: 1px solid rgba(46, 15, 132, 0.1);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(46, 15, 132, 0.05);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    background-color: #2e0f84;
+  }
+}

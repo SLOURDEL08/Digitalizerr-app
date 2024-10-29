@@ -3,7 +3,7 @@ import responsive from '../images/responsive.svg'
 import security from '../images/security.svg'
 import agenda from '../images/agenda.svg'
 import chat from '../images/chatia.svg'
-import ContactSection from '../components/ContactSection';
+import ContactSection from '../components/Contact/ContactSection';
 import ImageSlider from '../components/ImageSlider';
 import artiste from '../images/themeviewer/artiste.png'
 import batiment from '../images/themeviewer/batiment.png'

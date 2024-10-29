@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import arrow from '../images/arrow.png';
-import face1 from '../images/face1.png';
-import face2 from '../images/face2.png';
-import face3 from '../images/face3.png';
-import face4 from '../images/face4.png';
-import face5 from '../images/face5.png';
+import arrow from '../../images/arrow.png';
+import face1 from '../../images/face1.png';
+import face2 from '../../images/face2.png';
+import face3 from '../../images/face3.png';
+import face4 from '../../images/face4.png';
+import face5 from '../../images/face5.png';
 import { Star } from 'lucide-react';
 
 const testimonials = [
