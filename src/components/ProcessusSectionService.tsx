@@ -104,7 +104,7 @@ const ProcessusSectionServices: React.FC = () => {
     <div className="flex relative flex-col items-center justify-center max-md:gap-6 gap-10 !-mb-6">
       <div className="relative w-auto z-20 text-center ">
         <Title className="max-md:mb-8 z-20">Notre Processus</Title>
-          <img src={bubble} alt="star" className="w-28 z-10 max-md:w-8  absolute -top-16 -right-32 -rotate-12" />
+          <img src={bubble} alt="star" className="w-28 z-10 max-md:w-8 max-md:hidden  absolute -top-16 -right-32 -rotate-12" />
       </div>
 
       <div className="group relative w-full">

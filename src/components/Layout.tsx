@@ -1,7 +1,6 @@
 // Layout.tsx
 import React from 'react';
 import Navbar from './Navbar/Navbar';
-import DropDown from './Navbar/DropDown';
 import Header from './Header';
 import Footer from './Footer';
 import { NavigationProvider } from './Navbar/NavigationContext';
@@ -15,7 +14,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <NavigationProvider>
       <div className="flex flex-col">
         <Navbar />
-        <DropDown/>
         <main className="flex-grow container mx-auto py-8">
           {children}
         </main>

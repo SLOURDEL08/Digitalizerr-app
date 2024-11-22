@@ -12,8 +12,8 @@ export const typography = {
   title: {
     base: "font-bold font-primary",
     variants: {
-      primary: "text-7xl text-[#F6D663] max-lg:text-6xl leading-none max-sm:text-5xl",
-      secondary: "text-6xl text-[#F6D663] max-lg:text-5xl leading-none max-sm:text-4xl",
+      primary: "text-7xl text-[#F6D663] max-lg:text-6xl leading-none max-sm:text-4xl",
+      secondary: "text-6xl text-[#F6D663] max-lg:text-5xl leading-none max-sm:text-3xl",
 
     }
   } as TypographyVariant,

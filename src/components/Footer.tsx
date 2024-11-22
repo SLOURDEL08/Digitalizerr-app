@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#00000080] -mx-[50px] text-white">
-      <div className=" p-20 flex max-lg:flex-wrap justify-start gap-20">
+    <footer className="bg-[#00000080] -mx-[50px] max-md:-mx-[30px] text-white">
+      <div className=" p-20 flex max-lg:flex-wrap justify-start max-md:p-10 max-md:gap-10 gap-20">
         <div className="w-full md:w-1/4 mb-6 space-y-6 md:mb-0">
           <div className='bg-yellow-400 h-14 flex items-center text-xl justify-center rounded-xl'>
             @ <span>/Digitalizerr</span>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
         </div>
         
       </div>
-      <div className="text-white p-20 pt-0">
+      <div className="text-white max-md:p-10 max-md:pt-0 p-20 pt-0">
         <p>&copy; 2024 Your Company Name. All rights reserved.</p>
       </div>
     </footer>

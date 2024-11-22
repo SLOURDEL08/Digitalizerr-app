@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../Button';
 import ReviewSection from './Review';
-import Calendar from './Calendar';  // Nouveau import pour le composant Calendar externalisé
+import Calendar from './BookCall/Calendar';  // Nouveau import pour le composant Calendar externalisé
 import { Title } from '../Typography';
 
 const ContactForm: React.FC = () => (

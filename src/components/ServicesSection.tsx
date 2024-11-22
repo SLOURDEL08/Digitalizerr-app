@@ -110,10 +110,7 @@ const ServicesSection: React.FC = () => {
             <ServiceItem key={`top-${index}`} {...service} />
           ))}
         </div>
-        <div className='flex max-md:flex-wrap max-md:w-full gap-8 max-lg:gap-6 h-64 max-md:h-[450px]'>
-          <ServiceItem {...bottomRowServices[0]} className="w-1/3 max-md:w-full " />
-          <ServiceItem {...bottomRowServices[1]} className="w-2/3  max-md:w-full " />
-        </div>
+      
       </div>
     </main>
   );

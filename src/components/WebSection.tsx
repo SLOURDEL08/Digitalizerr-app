@@ -1,14 +1,18 @@
 import React from 'react';
 import lampImage from '../images/lampMessage.png';
-import { Link } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
 import { Subtitle, Title } from './Typography/Text';
+
+interface webProps {
+  className?: string;
+  id?: string; // Ajoutez id ici
+}
 
 interface WebOfferProps {
   title: string;
   features: string[];
   color: string;
   link: string;
+  className?: string;
 }
 
 const ArrowIcon: React.FC<{ color: string }> = ({ color }) => (
@@ -17,7 +21,7 @@ const ArrowIcon: React.FC<{ color: string }> = ({ color }) => (
   </svg>
 );
 
-const WebOffer: React.FC<WebOfferProps> = ({ title, features, color, link }) => (
+const WebOffer: React.FC<WebOfferProps> = ({ title, features, color, link, className }) => (
   <div className='flex max-lg:relative max-lg:block max-lg:space-y-8 justify-between cursor-pointer gap-14 bg-[#00000030] scale-100 hover:scale-105 hover:bg-[#00000040] transition-all duration-500 p-8 px-10 rounded-3xl'>
     <div className={`flex flex-col min-w-60 rounded-full shadow-md overflow-hidden`} style={{ backgroundColor: color }}>
       <div className='flex-grow flex items-center max-md:p-2 max-md:text-[22px] justify-center font-bold text-2xl p-4 text-white'>
@@ -41,7 +45,7 @@ const WebOffer: React.FC<WebOfferProps> = ({ title, features, color, link }) => 
   </div>
 );
 
-const WebSection: React.FC = () => {
+const WebSection: React.FC<webProps> = ({ className, id }) => {
   const webOffers: WebOfferProps[] = [
     {
       title: 'VITRINE',
@@ -75,7 +79,7 @@ const WebSection: React.FC = () => {
   ];
 
   return (
-    <section id='developpement' className='scroll-mt-[100px] text-center space-y-10'>
+    <section id={id} className={`scroll-mt-[100px] text-center space-y-10 ${className}`}>
       <div>
         <Subtitle className='mb-4'>nos différentes offres de</Subtitle>
         <Title type='primary'>SITE WEB</Title>

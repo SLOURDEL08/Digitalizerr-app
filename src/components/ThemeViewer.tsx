@@ -210,13 +210,14 @@ const ThemeViewer: React.FC = () => {
         <div className='w-[55%] max-lg:w-full'>
           <Subtitle className='mb-4'>Un site qui vous ressemble</Subtitle>
           <Title type='secondary' className=''>Choisissez parmi un large choix de thèmes</Title>
-          <div className='filter-contain max-md:text-xs flex flex-wrap gap-6 mt-8 mb-11'>
+          <div className='filter-contain max-md:text-xs flex flex-wrap gap-6 max-md:gap-4 mt-8 mb-11'>
             {Object.keys(themeImages).map((theme) => (
               <Button
                 key={theme}
                 variant={currentTheme === theme ? 'filter-active' : 'filter'}
                 size='small'
                 onClick={() => handleThemeChange(theme)}
+                className='max-md:px-3 '
               >
                 {theme}
               </Button>
